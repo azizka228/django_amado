@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Главная страница
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="products-catagories-area clearfix">
+            <div class="amado-pro-catagory clearfix">
+
+                {% for product in products %}
+
+                <!-- Single Category -->
+                <div class="single-products-catagory clearfix">
+                    <a href="shop.html">
+                        <img src="#" alt="">
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <div class="line"></div>
+                            <p>From ${{product.price}}</p>
+                            <h4><b>{{ product.title }}</b></h4>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+{% endblock content %}
